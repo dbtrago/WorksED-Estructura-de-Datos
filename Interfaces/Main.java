@@ -1,14 +1,15 @@
 package Interfaces;
 
-import javax.swing.JFrame;
+import javax.swing.*;
+
 
 public class Main {
 	//Para mover la interfaz
 	interface Movible {
-	    void moverArriba();
-	    void moverAbajo();
-	    void moverIzquierda();
-	    void moverDerecha();
+		void moverArriba();
+		void moverAbajo();
+		void moverIzquierda();
+		void moverDerecha();
 	}
 	public static void main(String[] args)
 	{		
