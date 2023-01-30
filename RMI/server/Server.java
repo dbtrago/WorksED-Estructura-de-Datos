@@ -25,16 +25,22 @@ public class Server {
         boolean ack = false;
         if (ip == null | port == null | serviceName == null) return ack;
         try {
-            System.setProperty( "java.rmi.server.hostname", ip);
-            RMI service = new Service();
-            LocateRegistry.createRegistry(Integer.parseInt(port));
-            Naming.rebind(url, service);
+            System.setProperty( "java.rmi.server.hostname", ip); //para levantar un servidor
+            RMI service = new Service(); // Instancia de un servicio el codigo esta en server
+            LocateRegistry.createRegistry(Integer.parseInt(port)); // Se registrara en el puerto asociada a la conexión
+            //que hemos armado
+            Naming.rebind(url, service); // se construye la cadena de coneción con la que se publica el servicio
+            //Usado en intra net
             ack = true;
-        } catch (RemoteException e) {
+        } catch (RemoteException e)
+        {
             e.printStackTrace();
-        } catch (MalformedURLException e) {
+        } catch (MalformedURLException e)
+        {
             e.printStackTrace();
-        } finally {
+        }
+        finally
+        {
             return ack;
         }
     }

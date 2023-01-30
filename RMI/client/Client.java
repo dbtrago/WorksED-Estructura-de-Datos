@@ -9,27 +9,31 @@ import java.rmi.RemoteException;
 
 public class Client
 {
+    //Datos necesarios para crear la cadena de conexión URL
     private RMI service;
     private String ip;
     private String port;
     private String serviceName;
     private String url;
-
-    public Client(String ip, String port, String serviceName) {
+    //Constructor del cliente
+    public Client(String ip, String port, String serviceName)
+    {
         this.service = null;
         this.ip = ip;
         this.port = port;
         this.serviceName = serviceName;
+        //la URL arranca de manera diferente
         this.url = "rmi://" + ip + ":" + port + "/" + serviceName;
     }
 
-    public int fn(int test) throws RemoteException {
-
+    public int fn(int test) throws RemoteException
+    {
 
         try{
             service = (RMI) Naming.lookup(url);
             return service.fn(test);
-        } catch (MalformedURLException | RemoteException | NotBoundException e) {
+        } catch (MalformedURLException | RemoteException | NotBoundException e)
+        {
             e.printStackTrace();
             return 0;
         }
