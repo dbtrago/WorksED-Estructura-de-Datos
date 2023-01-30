@@ -15,7 +15,7 @@ public class Main {
 	{		
 		//Creación del JFrame
 		JFrame ventana = new JFrame("Mi ventana");
-		ventana.setSize(1900, 999);
+		ventana.setSize(1915, 1012);
 		ventana.setVisible(true);
 		ventana.setTitle("OrderEase");
 	}
