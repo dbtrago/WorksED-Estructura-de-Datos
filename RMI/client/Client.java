@@ -7,8 +7,8 @@ import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 
-public class Client {
-
+public class Client
+{
     private RMI service;
     private String ip;
     private String port;
