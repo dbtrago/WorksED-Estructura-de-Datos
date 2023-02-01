@@ -1,4 +1,4 @@
-package interfaces;
+package Ejercicios.interfaces;
 
 import java.util.Iterator;
 

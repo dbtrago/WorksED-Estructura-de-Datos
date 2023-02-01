@@ -1,4 +1,4 @@
-package interfaces;
+package Ejercicios.interfaces;
 
 /**
  * @author Lenin Javier Serrano Gil
