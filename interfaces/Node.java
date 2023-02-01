@@ -6,6 +6,7 @@ package interfaces;
  */
 public interface Node<T>
 {
+
     /***
      * Asigna un objeto genérico.
      * @param object objeto
