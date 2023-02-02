@@ -12,12 +12,14 @@ public interface Node<T>
      * @param object objeto
      * @return boolean true
      */
+    //Terminado sin pruebas
     public boolean setObject(T object);
 
     /***
      * Retorna el objeto genérico.
      * @return object objeto
      */
+    //Retorno sin pruebas
     public T getObject();
 
     /***

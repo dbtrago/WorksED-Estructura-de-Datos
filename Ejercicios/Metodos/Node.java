@@ -10,17 +10,18 @@ public class Node<T>
         this.data = data;
         this.next = null;
     }
-
-    public T getData()
+    //Retorno de variables
+    public T getObject()
     {
         return data;
     }
-    //Metodo setObject
-    public void setObject(T Object)
+    //Metodo asignar variables
+    public boolean setObject(T Object)
     {
         this.data = Object;
+        return true;
     }
-
+    
     public Node<T> getNext()
     {
         return next;

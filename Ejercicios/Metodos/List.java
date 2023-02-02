@@ -1,21 +1,22 @@
 package Ejercicios.Metodos;
 
-public class LinkedList<T>
+public class List<T>
 {
     private Node<T> head;
 
-    public LinkedList()
+    public List()
     {
         head = null;
     }
-
+    //Añade la cabeza
     public void addToHead(T data)
     {
         Node<T> newNode = new Node<>(data);
         newNode.setNext(head);
         head = newNode;
     }
-
+    
+    //Añade al final de la lista enlazada
     public void addToTail(T data)
     {
         Node<T> newNode = new Node<>(data);
@@ -31,14 +32,14 @@ public class LinkedList<T>
         }
         curr.setNext(newNode);
     }
-
+    //Quita la cabeza
     public T removeFromHead()
     {
-        T data = head.getData();
+        T data = head.getObject();
         head = head.getNext();
         return data;
     }
-
+    //Quita de la cola
     public T removeFromTail()
     {
         if (head == null)
@@ -48,7 +49,7 @@ public class LinkedList<T>
         Node<T> curr = head;
         if (curr.getNext() == null)
         {
-            T data = head.getData();
+            T data = head.getObject();
             head = null;
             return data;
         }
@@ -56,17 +57,17 @@ public class LinkedList<T>
         {
             curr = curr.getNext();
         }
-        T data = curr.getNext().getData();
+        T data = curr.getNext().getObject();
         curr.setNext(null);
         return data;
     }
-
+    //Impresión de la lista
     public void printList()
     {
         Node<T> curr = head;
         while (curr != null)
         {
-            System.out.print(curr.getData() + " -> ");
+            System.out.print(curr.getObject() + " -> ");
             curr = curr.getNext();
         }
         System.out.println("null");
