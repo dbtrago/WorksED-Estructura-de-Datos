@@ -1,42 +1,46 @@
-package server;
-
-import interfaces.RMI;
-
 import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 
-public class Server {
-
+public class Server
+{
+    //Atributos
     public String ip;
     public String port;
     public String serviceName;
     public String url;
-
-    public Server(String ip, String port, String serviceName) {
+    //Constructor
+    public Server(String ip, String port, String serviceName)
+    {
         this.ip = ip;
         this.port = port;
         this.serviceName = serviceName;
         this.url = "//" + ip + ":" + port + "/" + serviceName;
     }
 
-    public boolean deployService() {
+    public boolean deployService()
+    {
         boolean ack = false;
         if (ip == null | port == null | serviceName == null) return ack;
-        try {
+        try
+        {
             System.setProperty( "java.rmi.server.hostname", ip);
             RMI service = new Service();
             LocateRegistry.createRegistry(Integer.parseInt(port));
             Naming.rebind(url, service);
             ack = true;
-        } catch (RemoteException e) {
+        }
+        catch (RemoteException e)
+        {
             e.printStackTrace();
-        } catch (MalformedURLException e) {
+        } catch (MalformedURLException e)
+        {
             e.printStackTrace();
-        } finally {
+        }
+        finally
+        {
             return ack;
         }
     }
-
 }
