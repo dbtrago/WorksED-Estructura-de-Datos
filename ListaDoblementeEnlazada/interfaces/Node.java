@@ -1,7 +1,4 @@
-package interfaces;
-
-import Paquete.LinkedListNode;
-
+package Interfaces;
 /**
  * @author Lenin Javier Serrano Gil
  * @param <T> generic objects
