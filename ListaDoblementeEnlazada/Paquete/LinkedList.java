@@ -72,15 +72,15 @@ public class LinkedList<T> implements List<T>
 	{
         try
         {
-        	if(object != null)
-        	{
+            if(object != null)
+            {
 	            LinkedListNode nodoReference = (LinkedListNode)node; // castea un linkedlistnode ingresando la referencia del nodo que entra
-	            if(isEmpty())
-	            {
+                if(isEmpty())
+                {
 	                head = nodoReference; // se asigna el nodo nuevo que entro
-	                nodoReference.next = new LinkedListNode(object);//Se castea por que no se puede obtener un objeto
+                    nodoReference.next = new LinkedListNode(object);//Se castea por que no se puede obtener un objeto
 	
-	            }
+                }
 	            if(nodoReference == tail)// Si es el mismo nodo que la cola se agrega siguiente a la misma
 	            {
 	            	LinkedListNode newNode = new LinkedListNode(object);
