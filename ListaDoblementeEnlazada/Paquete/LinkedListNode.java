@@ -8,7 +8,7 @@ public class LinkedListNode<T> implements Node<T>
     private T object;
     LinkedListNode next;
     LinkedListNode  prev;
-    <  
+    
     public LinkedListNode()
     {
         this.object = null;

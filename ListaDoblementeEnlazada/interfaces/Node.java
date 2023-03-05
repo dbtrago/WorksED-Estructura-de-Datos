@@ -1,4 +1,4 @@
-package Interfaces;
+package interfaces;
 /**
  * @author Lenin Javier Serrano Gil
  * @param <T> generic objects
