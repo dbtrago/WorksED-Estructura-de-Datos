@@ -1,0 +1,48 @@
++------------+     +------------+     +------------+
+|    Cliente  |     |   Servidor |     |     BD     |
++------------+     +------------+     +------------+
+      ^                    ^                  ^
+      |                    |                  |
++--------------+   +--------------+   +--------------+
+|     Vista    |   |     Vista    |   |     Vista    |
+|--------------|   |--------------|   |--------------|
+| mostrarMenu()|   | mostrarMenu()|   |              |
+| agregarPedido()|  | procesarPedido()| |              |
+| cambiarEstadoPedido()| | cambiarEstadoPedido()| | 
++--------------+   +--------------+   +--------------+
+|  Controlador |   |  Controlador |   |  Controlador |
+|--------------|   |--------------|   |--------------|
+| validarPedido()| | validarPedido()| |              |
+| agregarPedido()| | agregarPedido()| |              |
+| cambiarEstadoPedido()|           | cambiarEstadoPedido()| | 
++--------------+   +--------------+   +--------------+
+|    Modelo    |   |    Modelo    |   |    Modelo    |
+|--------------|   |--------------|   |--------------|
+| Pedido       |   | Pedido       |   | Producto     |
+|--------------|   |--------------|   |--------------|
+| idPedido     |   | idPedido     |   | idProducto   |
+| mesa         |   | estadoPedido |   | nombre       |
+| estadoPedido |   | fechaPedido  |   | precio       |
+|              |   |              |   | descripción  |
++--------------+   +--------------+   +--------------+
+      ^                    ^                  ^
+      |                    |                  |
++------------------+  +------------------+  +------------------+
+|      Interfaz     |  |      Interfaz     |  |      Interfaz     |
++------------------+  +------------------+  +------------------+
+|        RMI       |  |        RMI       |  |        RMI       |
++------------------+  +------------------+  +------------------+
+      ^                    ^                  ^
+      |                    |                  |
++--------------+   +--------------+   +--------------+
+|     Cocina   |   |   Operador  |   |     BD     |
++--------------+   +--------------+   +--------------+
+|    Modelo    |   |    Modelo    |   |    Modelo    |
+|--------------|   |--------------|   |--------------|
+| Pedido       |   | Pedido       |   | Producto     |
+|--------------|   |--------------|   |--------------|
+| idPedido     |   | idPedido     |   | idProducto   |
+| mesa         |   | estadoPedido |   | nombre       |
+| estadoPedido |   | fechaPedido  |   | precio       |
+|              |   |              |   | descripción  |
++--------------+   +--------------+   +--------------+
