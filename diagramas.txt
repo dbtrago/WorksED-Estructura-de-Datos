@@ -1,0 +1,52 @@
+Claro, aquí tienes un diagrama de clases básico para un administrador utilizando el patrón de diseño Modelo-Vista-Controlador (MVC) junto con la base de datos. Ten en cuenta que el diagrama se centra en el administrador y las clases relacionadas, por lo que es posible que necesites agregar funcionalidades adicionales según tus necesidades.
+
++-------------------------------------------------+
+|                     Modelo                      |
++-------------------------------------------------+
+| + Administrador                                 |
+|    - id: int                                    |
+|    - nombre: string                             |
+|    - email: string                              |
+|    - contraseña: string                         |
+|                                                 |
+|    + crear_administrador(): bool                |
+|    + actualizar_administrador(): bool           |
+|    + eliminar_administrador(): bool             |
+|    + obtener_administrador(id: int): Administrador|
+|    + autenticar(email: string, contraseña: string): bool|
+|                                                 |
+| + Base_datos                                    |
+|    - conexion: object                           |
+|                                                 |
+|    + conectar(): void                           |
+|    + desconectar(): void                        |
+|    + ejecutar_consulta(sql: string): object     |
+|    + ejecutar_actualizacion(sql: string): int   |
++-------------------------------------------------+
+
++-------------------------------------------------+
+|                     Vista                       |
++-------------------------------------------------+
+| + AdministradorVista                            |
+|                                                 |
+|    + mostrar_administrador(administrador: Administrador): void|
+|    + mostrar_administradores(administradores: List[Administrador]): void|
+|    + mostrar_formulario_creacion(): void        |
+|    + mostrar_formulario_edicion(administrador: Administrador): void|
+|    + mostrar_mensaje(mensaje: string): void     |
++-------------------------------------------------+
+
++-------------------------------------------------+
+|                  Controlador                   |
++-------------------------------------------------+
+| + AdministradorControlador                     |
+|    - modelo: Modelo                             |
+|    - vista: Vista                               |
+|                                                 |
+|    + crear_administrador(): void                |
+|    + actualizar_administrador(): void           |
+|    + eliminar_administrador(): void             |
+|    + obtener_administrador(): void              |
+|    + listar_administradores(): void             |
+|    + autenticar_administrador(): void           |
++-------------------------------------------------+
