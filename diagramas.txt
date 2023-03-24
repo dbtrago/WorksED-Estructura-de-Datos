@@ -50,3 +50,67 @@ Claro, aquí tienes un diagrama de clases básico para un administrador utilizan
 |    + listar_administradores(): void             |
 |    + autenticar_administrador(): void           |
 +-------------------------------------------------+
+
+Claro, aquí te presento un posible diagrama de dominio para los tres proyectos que mencionas:
+
+                   +-------------+
+                   | Administrador|
+                   +-------------+
+                   |  Servidor   |
+                   |   Programa  |
+                   +-------------+
+                          ^
+                          |
+                          |
+                          |
++--------------+    +-------------+   +-----------+
+|   Operador   |----|   Entrega   |---|   Pedido  |
++--------------+    +-------------+   +-----------+
+|    Manejo    |    |   Despacho  |   |  Información|
+|    Envíos    |    |   Entregado |   |  del Pedido|
++--------------+    +-------------+   +-----------+
+En este diagrama, vemos que el Administrador es el proyecto principal que contiene tanto el Servidor como los datos del programa. A su vez, el operador y la entrega se conectan al Administrador para acceder a la información necesaria para realizar sus tareas.
+
+El Operador se encarga de manejar los envíos, mientras que la Entrega se encarga de despachar los pedidos y confirmar si han sido entregados. El Pedido contiene información específica sobre cada pedido, como la dirección de entrega y los productos solicitados.
+
+Es importante destacar que este diagrama es solo una posible representación de la relación entre los proyectos y que puede variar dependiendo de las necesidades específicas de cada uno.
+
+
+¡Por supuesto! Te presento un posible diagrama de dominio más amplio, donde cada proyecto tiene RMI, vista, controlador y modelo:
+
++------------+     +------------+     +------------+
+|   Cliente  |     |   Servidor |     |    BD      |
++------------+     +------------+     +------------+
+      ^                    ^                  ^
+      |                    |                  |
++--------------+   +--------------+   +--------------+
+|     Vista    |   |     Vista    |   |     Vista    |
++--------------+   +--------------+   +--------------+
+|  Controlador |   |  Controlador |   |  Controlador |
++--------------+   +--------------+   +--------------+
+|    Modelo    |   |    Modelo    |   |    Modelo    |
++--------------+   +--------------+   +--------------+
+      ^                    ^                  ^
+      |                    |                  |
++------------------+  +------------------+  +------------------+
+|      Interfaz     |  |      Interfaz     |  |      Interfaz     |
++------------------+  +------------------+  +------------------+
+|        RMI       |  |        RMI       |  |        RMI       |
++------------------+  +------------------+  +------------------+
+En este diagrama, cada proyecto tiene su propio modelo, vista, controlador y una interfaz RMI para comunicarse con los demás proyectos.
+
+El proyecto Cliente es el punto de entrada para los usuarios finales y se encarga de interactuar con la vista y controlador correspondientes para solicitar información al servidor.
+
+El proyecto Servidor maneja la lógica de negocio y contiene la interfaz RMI que permite la comunicación con el proyecto Cliente.
+
+La Base de Datos (BD) almacena la información necesaria para el funcionamiento de los proyectos.
+
+Cada vista se encarga de mostrar la información al usuario y recoger las acciones que este realiza.
+
+Cada controlador maneja la lógica de la vista correspondiente, procesando las entradas del usuario y comunicándose con el modelo para obtener y actualizar la información necesaria.
+
+Cada modelo es responsable de manejar la información y la lógica de negocio correspondiente a su proyecto.
+
+Cada interfaz RMI permite la comunicación entre los proyectos, permitiendo que se soliciten y se compartan información.
+
+Cabe destacar que este diagrama es sólo una posible representación de la relación entre los proyectos y que puede variar dependiendo de las necesidades específicas de cada uno.
