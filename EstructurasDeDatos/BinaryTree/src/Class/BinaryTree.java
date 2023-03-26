@@ -80,7 +80,25 @@ public class BinaryTree <T>
             inorder(right);
         }
     }
-
+    //Metodos de insercción
+    public void insertRecursive(T value)
+    {
+        root = insertRecursiveHelper(root, value);
+    }
+    //No lo he probado, probablemente no sirva
+    private  BinaryNode insertRecursiveHelper(BinaryNode node, T value)
+    {        
+        if (node == null)
+        {
+            node = new BinaryNode(value);
+            return node;            
+        }
+        else
+        {
+            return null;
+        }
+    }
+    
 
     //Getters and setters
 

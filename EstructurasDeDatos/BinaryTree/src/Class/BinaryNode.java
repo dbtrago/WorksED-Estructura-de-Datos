@@ -2,8 +2,7 @@ package Class;
 
 public class BinaryNode <T>
 {
-    private BinaryNode left;
-    private BinaryNode right;
+    private BinaryNode left,right;    
 
     private T object;
 
