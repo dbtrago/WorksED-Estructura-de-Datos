@@ -1,6 +1,7 @@
 package Class;
 
 
+import java.nio.Buffer;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -80,25 +81,7 @@ public class BinaryTree <T>
             inorder(right);
         }
     }
-    //Metodos de insercción
-    public void insertRecursive(T value)
-    {
-        root = insertRecursiveHelper(root, value);
-    }
-    //No lo he probado, probablemente no sirva
-    private  BinaryNode insertRecursiveHelper(BinaryNode node, T value)
-    {        
-        if (node == null)
-        {
-            node = new BinaryNode(value);
-            return node;            
-        }
-        else
-        {
-            return null;
-        }
-    }
-    
+    //Metodos de insercción    
 
     //Getters and setters
 
