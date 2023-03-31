@@ -38,7 +38,8 @@ public class Main
                     if (direccion.isLinkLocalAddress() || direccion.isLoopbackAddress() || direccion.isMulticastAddress()) {
                         continue;
                     }
-                    System.out.println("La dirección IP de la red es: " + direccion.getHostAddress());
+                    String ipHost = direccion.getHostAddress();
+                    System.out.println("La dirección IP de la red es: " + ipHost);
                 }
             }
         } 
