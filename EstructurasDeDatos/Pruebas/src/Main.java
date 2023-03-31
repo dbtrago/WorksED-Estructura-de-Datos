@@ -28,7 +28,8 @@ public class Main
             while (interfaces.hasMoreElements()) 
             {
                 NetworkInterface interfaz = interfaces.nextElement();
-                if (interfaz.isLoopback() || !interfaz.isUp()) {
+                if (interfaz.isLoopback() || !interfaz.isUp())
+                {
                     continue;
                 }
 

@@ -21,7 +21,7 @@ public class Main
             String a = ipHost();
             properties.load(new FileInputStream(new File("server.properties")));
             Server server = new Server(
-                    (String) a,
+                    (String) properties.get("IP"),
                     (String) properties.get("PORT"),
                     (String) properties.get("SERVICENAME")
             );
