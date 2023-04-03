@@ -22,7 +22,7 @@ public class Main
     public static void main(String[] args)
     {
         try
-        {
+        {   
             Enumeration<NetworkInterface> interfaces = NetworkInterface.getNetworkInterfaces();
 
             while (interfaces.hasMoreElements()) 
