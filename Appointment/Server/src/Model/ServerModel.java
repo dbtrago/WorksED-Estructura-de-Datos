@@ -12,6 +12,5 @@ public class ServerModel {
     }
     public boolean deployList(MonitorAdapter monitorAdapter){
         return false;
-    }
-    
+    }    
 }
